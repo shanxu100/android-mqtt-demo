@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:longClickable="true"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="mqtt服务器地址" />
+
+    <EditText
+        android:id="@+id/et_topics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入topic，多个topic用英文逗号','分割" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始" />
+
+    <CheckBox
+        android:id="@+id/cb_HEX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16进制显示" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/bclack" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_output"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:hint="接收到的消息" />-->
+
+    <ListView
+        android:id="@+id/lv_output"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"></ListView>
+
+</LinearLayout>
+
