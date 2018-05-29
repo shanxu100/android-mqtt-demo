@@ -8,6 +8,8 @@ android {
         applicationId "de.eclipsemagazin.mqtt.push"
         minSdkVersion 19
         targetSdkVersion 25
+        versionCode 2
+        versionName '1.2-2018-05-28'
     }
 
     buildTypes {

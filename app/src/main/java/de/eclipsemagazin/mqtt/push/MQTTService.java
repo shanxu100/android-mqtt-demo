@@ -18,7 +18,7 @@ import de.eclipsemagazin.mqtt.constant.WebConstant;
  */
 public class MQTTService extends Service {
 
-    public static final String clientId = "android-client";
+    public static final String clientId = "android-client" + System.currentTimeMillis();
     private MqttClient mqttClient;
     private MqttConnectOptions options;
 

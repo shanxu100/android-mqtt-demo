@@ -26,10 +26,9 @@ public class ByteUtil {
 //
 //        System.out.println(result);
 
-        int waterValue=9999;
-        String value = String.format( "%.1f",9999*0.01);
+        int waterValue = 9999;
+        String value = String.format("%.1f", 9999 * 0.01);
         System.out.println(value);
-
 
 
     }
@@ -224,5 +223,27 @@ public class ByteUtil {
     public static void byte2binary(byte b) {
         //Integer.toBinaryString((b & 0xFF) + 0x100).substring(1);
     }
+
+    /**
+     * @param str
+     * @return 将十六进制格式的String转换为字节数组
+     */
+    public static byte[] hexStringToBinary(String str) {
+        if (str == null || str.trim().equals("")) {
+            return new byte[0];
+        }
+
+        str = str.replaceAll(" ", "")
+                .replaceAll(",", "")
+                .replaceAll("0x", "");
+        byte[] bytes = new byte[str.length() / 2];
+        for (int i = 0; i < str.length() / 2; i++) {
+            String subStr = str.substring(i * 2, i * 2 + 2);
+            bytes[i] = (byte) Integer.parseInt(subStr, 16);
+        }
+
+        return bytes;
+    }
+
 
 }
